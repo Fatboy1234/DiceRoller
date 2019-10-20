@@ -14,7 +14,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:textSize="30sp"
-        android:text="Dice 1" />
+        android:text="@string/RDice1" />
 
     <TextView
         android:id="@+id/result1_text"
@@ -22,7 +22,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:textSize="30sp"
-        android:text="Dice 2" />
+        android:text="@string/RDice2" />
 
     <TextView
         android:id="@+id/result2_text"
@@ -30,7 +30,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:textSize="30sp"
-        android:text="Dice 3" />
+        android:text="@string/RDice3" />
 
     <Button
         android:id="@+id/roll_button"
@@ -56,7 +56,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:textSize="30sp"
-        android:text="Count up for Dice 1" />
+        android:text="@string/Dice1" />
 
     <TextView
         android:id="@+id/result1_count"
@@ -64,7 +64,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:textSize="30sp"
-        android:text="Count up for Dice 2" />
+        android:text="@string/Dice2" />
 
     <TextView
         android:id="@+id/result2_count"
@@ -72,7 +72,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:textSize="30sp"
-        android:text="Count up for Dice 3" />
+        android:text="@string/Dice3" />
 
     <TextView
         android:id="@+id/total_count"
@@ -80,5 +80,5 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:textSize="30sp"
-        android:text="Total Dice Value" />
+        android:text="@string/TotalDice" />
 </LinearLayout>
