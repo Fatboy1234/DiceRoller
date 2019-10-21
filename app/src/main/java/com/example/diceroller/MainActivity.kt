@@ -17,10 +17,12 @@ class MainActivity : AppCompatActivity() {
         //Setting target to be assign
         val rollButton: Button = findViewById(R.id.roll_button)
         val countButton: Button = findViewById(R.id.count_button)
-
+        val resetButton: Button = findViewById(R.id.Reset_button)
         //Action for dice
         rollButton.setOnClickListener { rollDice() }
         countButton.setOnClickListener { countDice() }
+        resetButton.setOnClickListener{resetDice()}
+
         }
     private fun rollDice() {
 
@@ -41,6 +43,16 @@ class MainActivity : AppCompatActivity() {
 
 
     }
+
+    private fun resetDice(){
+        val resultText: TextView = findViewById(R.id.result_text)
+        val resultText1: TextView = findViewById(R.id.result1_text)
+        val resultText2: TextView = findViewById(R.id.result2_text)
+        resultText.text = "0"
+        resultText1.text = "0"
+        resultText2.text = "0"
+    }
+
     private fun countDice() {
 
 
