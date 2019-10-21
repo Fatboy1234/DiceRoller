@@ -8,19 +8,20 @@
     android:layout_gravity="center_vertical"
     tools:context=".MainActivity" >
 
-    <ImageView
-        android:id="@+id/dice_image"
-        android:layout_width="104dp"
-        android:layout_height="91dp"
+    <TextView
+        android:id="@+id/result_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:src="@drawable/dice_1" />
+        android:textSize="30sp"
+        android:text="@string/RDice1" />
 
     <TextView
         android:id="@+id/result1_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:textSize="20sp"
+        android:textSize="30sp"
         android:text="@string/RDice2" />
 
     <TextView
@@ -28,7 +29,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:textSize="20sp"
+        android:textSize="30sp"
         android:text="@string/RDice3" />
 
     <Button
@@ -37,7 +38,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:textSize="20sp"
+        android:textSize="30sp"
         android:text="@string/roll_label" />
 
     <Button
@@ -46,7 +47,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:textSize="20sp"
+        android:textSize="30sp"
         android:text="@string/reset_btn" />
 
     <Button
@@ -55,7 +56,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:textSize="20sp"
+        android:textSize="30sp"
         android:text="@string/count_label" />
 
     <TextView
@@ -63,7 +64,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:textSize="20sp"
+        android:textSize="30sp"
         android:text="@string/Dice1" />
 
 
@@ -72,7 +73,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:textSize="20sp"
+        android:textSize="30sp"
         android:text="@string/Dice2" />
 
     <TextView
@@ -80,7 +81,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:textSize="20sp"
+        android:textSize="30sp"
         android:text="@string/Dice3" />
 
     <TextView
@@ -88,8 +89,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:textSize="20sp"
+        android:textSize="30sp"
         android:text="@string/TotalDice" />
-
-
 </LinearLayout>

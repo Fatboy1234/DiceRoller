@@ -3,7 +3,6 @@ package com.example.diceroller
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
-import android.widget.ImageView
 import android.widget.TextView
 import java.util.*
 
@@ -14,7 +13,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-       private  val imageIntHolder = ""
+
         //Setting target to be assign
         val rollButton: Button = findViewById(R.id.roll_button)
         val countButton: Button = findViewById(R.id.count_button)
@@ -29,7 +28,7 @@ class MainActivity : AppCompatActivity() {
 
 
 
-        val diceImage: ImageView = findViewById(R.id.dice_image)
+        val resultText: TextView = findViewById(R.id.result_text)
         val resultText1: TextView = findViewById(R.id.result1_text)
         val resultText2: TextView = findViewById(R.id.result2_text)
 
@@ -37,16 +36,7 @@ class MainActivity : AppCompatActivity() {
         val randomInt = Random().nextInt(6) + 1
         val randomInt1 = Random().nextInt(6) + 1
         val randomInt2 = Random().nextInt(6) + 1
-        val drawableResource = when (randomInt) {
-            1 -> R.drawable.dice_1
-            2 -> R.drawable.dice_2
-            3 -> R.drawable.dice_3
-            4 -> R.drawable.dice_4
-            5 -> R.drawable.dice_5
-            else -> R.drawable.dice_6
-
-        }
-        diceImage.setImageResource(drawableResource)
+        resultText.text = randomInt.toString()
         resultText1.text = randomInt1.toString()
         resultText2.text = randomInt2.toString()
 
@@ -55,10 +45,10 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun resetDice(){
-        val diceImage: ImageView = findViewById(R.id.dice_image)
+        val resultText: TextView = findViewById(R.id.result_text)
         val resultText1: TextView = findViewById(R.id.result1_text)
         val resultText2: TextView = findViewById(R.id.result2_text)
-        diceImage.setImageResource(R.drawable.empty_dice)
+        resultText.text = "0"
         resultText1.text = "0"
         resultText2.text = "0"
     }
@@ -67,26 +57,25 @@ class MainActivity : AppCompatActivity() {
 
 
         //Getting Dice Random Value
-        val diceImage: ImageView = findViewById(R.id.dice_image)
+        val resultText: TextView = findViewById(R.id.result_text)
         val resultText1: TextView = findViewById(R.id.result1_text)
         val resultText2: TextView = findViewById(R.id.result2_text)
 
         //Convert Dice Random Value to Integer for + 1
-          val countText: TextView = findViewById(R.id.result_count)
+        val countText: TextView = findViewById(R.id.result_count)
         val countText1: TextView = findViewById(R.id.result1_count)
         val countText2: TextView = findViewById(R.id.result2_count)
         val totalText: TextView = findViewById(R.id.total_count)
 
         //Plus 1 for the dice Value
-        val result = Integer.parseInt(diceImage.toString()) + 1
+        val result = Integer.parseInt(resultText.text.toString()) + 1
         val result1 = Integer.parseInt(resultText1.text.toString()) + 1
         val result2 = Integer.parseInt(resultText2.text.toString()) + 1
 
         //Calculation for the total dice Value
-        val total = /**Integer.parseInt(resultText.text.toString()) + **/Integer.parseInt(resultText1.text.toString()) + Integer.parseInt(resultText2.text.toString())
+        val total = Integer.parseInt(resultText.text.toString()) + Integer.parseInt(resultText1.text.toString()) + Integer.parseInt(resultText2.text.toString())
 
         //dice1
-        /**
         if( result >= 6)
         {
             countText.text = "6"
@@ -94,8 +83,7 @@ class MainActivity : AppCompatActivity() {
         }
         else{
             countText.text = result.toString()
-       }
-        **/
+        }
         //dice 2
         if( result1 >= 6)
         {
@@ -124,7 +112,7 @@ class MainActivity : AppCompatActivity() {
 
         }
 
-        
+
 
     }
 }

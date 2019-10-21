@@ -8,6 +8,6 @@
     <string name="TotalDice">Total Dice Value</string>
     <string name="RDice2">Dice 2</string>
     <string name="RDice3">Dice 3</string>
-
+    <string name="RDice1">Dice 1</string>
     <string name="reset_btn">Reset</string>
 </resources>
