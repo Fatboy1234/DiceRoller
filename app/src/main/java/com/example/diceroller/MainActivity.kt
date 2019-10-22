@@ -48,9 +48,19 @@ class MainActivity : AppCompatActivity() {
         val resultText: TextView = findViewById(R.id.result_text)
         val resultText1: TextView = findViewById(R.id.result1_text)
         val resultText2: TextView = findViewById(R.id.result2_text)
+
+        //total  and count
+        val countText: TextView = findViewById(R.id.result_count)
+        val countText1: TextView = findViewById(R.id.result1_count)
+        val countText2: TextView = findViewById(R.id.result2_count)
+        val totalText: TextView = findViewById(R.id.total_count)
+
         resultText.text = "0"
         resultText1.text = "0"
         resultText2.text = "0"
+
+
+
     }
 
     private fun countDice() {
@@ -66,6 +76,20 @@ class MainActivity : AppCompatActivity() {
         val countText1: TextView = findViewById(R.id.result1_count)
         val countText2: TextView = findViewById(R.id.result2_count)
         val totalText: TextView = findViewById(R.id.total_count)
+
+        val onScreenText = countText.text.toString().toIntOrNull()
+
+        val isInteger : Boolean =  onScreenText!=null
+
+        if(!isInteger)
+        {
+            countText.text = "1"
+            countText.text = "1"
+            countText.text = "1"
+            countText.text = "1"
+            countText.text = "1"
+
+        }
 
         //Plus 1 for the dice Value
         val result = Integer.parseInt(resultText.text.toString()) + 1
