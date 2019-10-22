@@ -13,23 +13,10 @@
         android:layout_width="104dp"
         android:layout_height="91dp"
         android:layout_gravity="center_horizontal"
-        android:src="@drawable/dice_1" />
+        android:src="@drawable/empty_dice"
+        tools:src="@drawable/dice_1"/>
 
-    <TextView
-        android:id="@+id/result1_text"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:textSize="20sp"
-        android:text="@string/RDice2" />
 
-    <TextView
-        android:id="@+id/result2_text"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:textSize="20sp"
-        android:text="@string/RDice3" />
 
     <Button
         android:id="@+id/roll_button"
@@ -58,38 +45,24 @@
         android:textSize="20sp"
         android:text="@string/count_label" />
 
-    <TextView
+    <ImageView
         android:id="@+id/result_count"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="128dp"
+        android:layout_height="107dp"
         android:layout_gravity="center_horizontal"
+        android:src="@drawable/empty_dice"
         android:textSize="20sp"
-        android:text="@string/Dice1" />
+    tools:src="@drawable/dice_1"/>
 
 
     <TextView
-        android:id="@+id/result1_count"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:textSize="20sp"
-        android:text="@string/Dice2" />
+        android:id="@+id/test"
 
-    <TextView
-        android:id="@+id/result2_count"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:textSize="20sp"
-        android:text="@string/Dice3" />
-
-    <TextView
-        android:id="@+id/total_count"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:textSize="20sp"
-        android:text="@string/TotalDice" />
+        android:text="@string/test"/>
 
 
 </LinearLayout>

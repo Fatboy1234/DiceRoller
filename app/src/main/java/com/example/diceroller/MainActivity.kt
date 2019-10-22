@@ -10,34 +10,35 @@ import java.util.*
 
 
 class MainActivity : AppCompatActivity() {
-
+    lateinit var diceImage : ImageView
     override fun onCreate(savedInstanceState: Bundle?) {
+
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-       private  val imageIntHolder = ""
+
         //Setting target to be assign
+        diceImage = findViewById(R.id.dice_image)
         val rollButton: Button = findViewById(R.id.roll_button)
         val countButton: Button = findViewById(R.id.count_button)
         val resetButton: Button = findViewById(R.id.Reset_button)
         //Action for dice
         rollButton.setOnClickListener { rollDice() }
-        countButton.setOnClickListener { countDice() }
+        countButton.setOnClickListener { getRandomDiceImage() }
         resetButton.setOnClickListener{resetDice()}
 
         }
     private fun rollDice() {
+        val drawableResource = getRandomDiceImage()
+        diceImage.setImageResource(drawableResource)
 
 
 
-        val diceImage: ImageView = findViewById(R.id.dice_image)
-        val resultText1: TextView = findViewById(R.id.result1_text)
-        val resultText2: TextView = findViewById(R.id.result2_text)
 
+    }
+    private fun getRandomDiceImage() : Int
+    {
 
-        val randomInt = Random().nextInt(6) + 1
-        val randomInt1 = Random().nextInt(6) + 1
-        val randomInt2 = Random().nextInt(6) + 1
-        val drawableResource = when (randomInt) {
+        val drawableResource = when (Random().nextInt(6) + 1) {
             1 -> R.drawable.dice_1
             2 -> R.drawable.dice_2
             3 -> R.drawable.dice_3
@@ -46,21 +47,14 @@ class MainActivity : AppCompatActivity() {
             else -> R.drawable.dice_6
 
         }
-        diceImage.setImageResource(drawableResource)
-        resultText1.text = randomInt1.toString()
-        resultText2.text = randomInt2.toString()
-
-
-
+        return drawableResource
     }
 
     private fun resetDice(){
         val diceImage: ImageView = findViewById(R.id.dice_image)
-        val resultText1: TextView = findViewById(R.id.result1_text)
-        val resultText2: TextView = findViewById(R.id.result2_text)
+
         diceImage.setImageResource(R.drawable.empty_dice)
-        resultText1.text = "0"
-        resultText2.text = "0"
+
     }
 
     private fun countDice() {
@@ -68,61 +62,16 @@ class MainActivity : AppCompatActivity() {
 
         //Getting Dice Random Value
         val diceImage: ImageView = findViewById(R.id.dice_image)
-        val resultText1: TextView = findViewById(R.id.result1_text)
-        val resultText2: TextView = findViewById(R.id.result2_text)
 
         //Convert Dice Random Value to Integer for + 1
-          val countText: TextView = findViewById(R.id.result_count)
-        val countText1: TextView = findViewById(R.id.result1_count)
-        val countText2: TextView = findViewById(R.id.result2_count)
-        val totalText: TextView = findViewById(R.id.total_count)
+
+
 
         //Plus 1 for the dice Value
         val result = Integer.parseInt(diceImage.toString()) + 1
-        val result1 = Integer.parseInt(resultText1.text.toString()) + 1
-        val result2 = Integer.parseInt(resultText2.text.toString()) + 1
 
-        //Calculation for the total dice Value
-        val total = /**Integer.parseInt(resultText.text.toString()) + **/Integer.parseInt(resultText1.text.toString()) + Integer.parseInt(resultText2.text.toString())
 
-        //dice1
-        /**
-        if( result >= 6)
-        {
-            countText.text = "6"
 
-        }
-        else{
-            countText.text = result.toString()
-       }
-        **/
-        //dice 2
-        if( result1 >= 6)
-        {
-            countText1.text = "6"
-
-        }
-        else{
-            countText1.text = result1.toString()
-        }
-        //dice 3
-        if( result2 >= 6)
-        {
-            countText2.text = "6"
-
-        }
-        else{
-            countText2.text = result2.toString()
-        }
-        //Total Dice Amount
-        if(total >=18)
-        {
-            totalText.text = "18"
-        }
-        else{
-            totalText.text = total.toString()
-
-        }
 
         
 
