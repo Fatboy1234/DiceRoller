@@ -23,7 +23,7 @@ class MainActivity : AppCompatActivity() {
         countButton.setOnClickListener { countDice() }
         resetButton.setOnClickListener{resetDice()}
 
-        }
+    }
     private fun rollDice() {
 
 
@@ -135,7 +135,7 @@ class MainActivity : AppCompatActivity() {
 
             }
         }
-        }
+    }
 
 
 
