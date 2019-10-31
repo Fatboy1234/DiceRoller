@@ -77,66 +77,68 @@ class MainActivity : AppCompatActivity() {
         val countText2: TextView = findViewById(R.id.result2_count)
         val totalText: TextView = findViewById(R.id.total_count)
 
-        val onScreenText = countText.text.toString().toIntOrNull()
+        val onScreenText = resultText.text.toString().toIntOrNull()
 
         val isInteger : Boolean =  onScreenText!=null
 
         if(!isInteger)
         {
-            countText.text = "1"
-            countText.text = "1"
-            countText.text = "1"
-            countText.text = "1"
-            countText.text = "1"
+            resultText.text = "1"
+            resultText1.text = "1"
+            resultText2.text = "1"
 
         }
-
-        //Plus 1 for the dice Value
-        val result = Integer.parseInt(resultText.text.toString()) + 1
-        val result1 = Integer.parseInt(resultText1.text.toString()) + 1
-        val result2 = Integer.parseInt(resultText2.text.toString()) + 1
-
-        //Calculation for the total dice Value
-        val total = Integer.parseInt(resultText.text.toString()) + Integer.parseInt(resultText1.text.toString()) + Integer.parseInt(resultText2.text.toString())
-
-        //dice1
-        if( result >= 6)
+        else
         {
-            countText.text = "6"
+            //Plus 1 for the dice Value
+            val result = Integer.parseInt(resultText.text.toString()) + 1
+            val result1 = Integer.parseInt(resultText1.text.toString()) + 1
+            val result2 = Integer.parseInt(resultText2.text.toString()) + 1
 
-        }
-        else{
-            countText.text = result.toString()
-        }
-        //dice 2
-        if( result1 >= 6)
-        {
-            countText1.text = "6"
+            //Calculation for the total dice Value
+            val total = Integer.parseInt(resultText.text.toString()) + Integer.parseInt(resultText1.text.toString()) + Integer.parseInt(resultText2.text.toString())
 
-        }
-        else{
-            countText1.text = result1.toString()
-        }
-        //dice 3
-        if( result2 >= 6)
-        {
-            countText2.text = "6"
+            //dice1
+            if( result >= 6)
+            {
+                countText.text = "6"
 
-        }
-        else{
-            countText2.text = result2.toString()
-        }
-        //Total Dice Amount
-        if(total >=18)
-        {
-            totalText.text = "18"
-        }
-        else{
-            totalText.text = total.toString()
+            }
+            else{
+                countText.text = result.toString()
+            }
+            //dice 2
+            if( result1 >= 6)
+            {
+                countText1.text = "6"
 
+            }
+            else{
+                countText1.text = result1.toString()
+            }
+            //dice 3
+            if( result2 >= 6)
+            {
+                countText2.text = "6"
+
+            }
+            else{
+                countText2.text = result2.toString()
+            }
+            //Total Dice Amount
+            if(total >=18)
+            {
+                totalText.text = "18"
+            }
+            else{
+                totalText.text = total.toString()
+
+            }
+        }
         }
 
 
 
-    }
+
+
 }
